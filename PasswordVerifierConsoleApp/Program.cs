@@ -1,0 +1,35 @@
+﻿using PasswordVerifierDomain;
+
+
+var psw1 = "";
+var psw2 = "pass";
+var psw3 = "password";
+var psw4 = "password1";
+var psw5 = "password12";
+var psw6 = "Password1*";
+var psw7 = "Password12*";
+
+var response1 = PasswordChecker.GetResponse(psw1);
+var response2 = PasswordChecker.GetResponse(psw2);
+var response3 = PasswordChecker.GetResponse(psw3);
+var response4 = PasswordChecker.GetResponse(psw4);
+var response5  = PasswordChecker.GetResponse(psw5);
+var response6 = PasswordChecker.GetResponse(psw6);
+var response7 = PasswordChecker.GetResponse(psw7);
+
+Console.WriteLine("************************************");
+Console.WriteLine($"psw1: {psw1} | isvalid: {response1.Item1} | messageError:{Environment.NewLine}{response1.Item2}");
+Console.WriteLine("************************************");
+Console.WriteLine($"psw2: {psw2} | isvalid: {response2.Item1} | messageError:{Environment.NewLine}{response2.Item2}");
+Console.WriteLine("************************************");
+Console.WriteLine($"psw3: {psw3} | isvalid: {response3.Item1} | messageError:{Environment.NewLine}{response3.Item2}");
+Console.WriteLine("************************************");
+Console.WriteLine($"psw4: {psw4} | isvalid: {response4.Item1} | messageError:{Environment.NewLine}{response4.Item2}");
+Console.WriteLine("************************************");
+Console.WriteLine($"psw5: {psw5} | isvalid: {response5.Item1} | messageError:{Environment.NewLine}{response5.Item2}");
+Console.WriteLine("************************************");
+Console.WriteLine($"psw6: {psw6} | isvalid: {response6.Item1} | messageError:{Environment.NewLine}{response6.Item2}");
+Console.WriteLine("************************************");
+Console.WriteLine($"psw7: {psw7} | isvalid: {response7.Item1} | messageError:{Environment.NewLine}{response7.Item2}");
+
+
